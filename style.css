@@ -1,0 +1,107 @@
+body {
+  background-image: url(shenlong.jpg);
+  background-size: cover;
+}
+
+.caixa-entrada {
+  position: absolute;
+  width: 680px;
+  height: 48px;
+  left: 240px;
+  top: 168px;
+}
+
+textarea::placeholder {
+  color: darkred;
+  font-weight: bold;
+  font-style: italic;
+}
+
+textarea {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 10px;
+  opacity: 0.7;
+  border: none;
+  border-radius: 32px;
+}
+
+.texto-btn {
+  display: block;
+  position: relative;
+  text-align: left;
+  left: 100px;
+  padding: 0 0 5px;
+  font-style: italic;
+  color: darkgray;
+  font-weight: bold;
+}
+
+.btn-entrada {
+  display: inline;
+  position: absolute;
+  width: 680px;
+  text-align: center;
+  top: 700px;
+}
+
+button {
+  width: 240px;
+  height: 67px;
+  border-radius: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: italic;
+  color: #333333;
+  margin-left: 30px;
+  cursor: pointer;
+  transition: 500ms;
+}
+
+button:hover {
+  color: darkgreen;
+  transform: scale(1.2);
+  text-decoration: underline;
+}
+.criptografar {
+  background: darkorange;
+}
+
+.descriptografar {
+  background: indianred;
+}
+
+.btn-copiar{
+	background: yellowgreen;
+	margin: 60px 0;
+}
+
+.caixa-saida{
+  position: absolute;
+  width: 400px;
+  height: 900px;
+  left: 1100px;
+  top: 40px;
+  border: 2px solid #000000;
+  border-radius: 32px;
+  background: #fefefe;
+  text-align: center;
+}
+
+
+
+#mensagem-saida {
+  background: transparent;
+  display: none;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+  padding: 1em;
+}
+
+h2 {
+  font-size: 18px;
+}
+
