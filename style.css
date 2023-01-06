@@ -1,14 +1,16 @@
 body {
+  min-height: 100%;
   background-image: url(shenlong.jpg);
   background-size: cover;
+  font-size: 16px;
 }
 
 .caixa-entrada {
-  position: absolute;
-  width: 680px;
-  height: 48px;
-  left: 240px;
-  top: 168px;
+  display: inline-block;
+  width: 60%;
+  text-align: center;
+  margin: 50px 0;
+  vertical-align: top;
 }
 
 textarea::placeholder {
@@ -18,7 +20,9 @@ textarea::placeholder {
 }
 
 textarea {
-  font-size: 18px;
+  width: 70%;
+  min-height: 550px;
+  font-size: 1em;
   font-weight: bold;
   padding: 10px 10px;
   opacity: 0.7;
@@ -29,27 +33,23 @@ textarea {
 .texto-btn {
   display: block;
   position: relative;
-  text-align: left;
-  left: 100px;
   padding: 0 0 5px;
   font-style: italic;
-  color: darkgray;
-  font-weight: bold;
+  color: darkred;
+  font-weight: bold; 
+  right: 100px;
 }
 
 .btn-entrada {
-  display: inline;
-  position: absolute;
-  width: 680px;
-  text-align: center;
-  top: 700px;
+  display: block;
+  margin: 18px auto;
 }
 
 button {
   width: 240px;
   height: 67px;
   border-radius: 20px;
-  font-size: 18px;
+  font-size: 1em;
   font-weight: bold;
   font-style: italic;
   color: #333333;
@@ -73,19 +73,21 @@ button:hover {
 
 .btn-copiar{
 	background: yellowgreen;
-	margin: 60px 0;
+  margin: 40px 0 0;
 }
 
 .caixa-saida{
+  display: inline-block;
   position: absolute;
-  width: 400px;
-  height: 900px;
-  left: 1100px;
-  top: 40px;
+  right: 70px;
+  width: 25%;
+  height: 700px;
   border: 2px solid #000000;
   border-radius: 32px;
   background: #fefefe;
   text-align: center;
+  vertical-align: top;
+  margin: 50px 0;
 }
 
 
@@ -95,13 +97,29 @@ button:hover {
   display: none;
 }
 
+#aviso{
+  padding: 1em;
+}
+
+#aviso img{
+  width: 60%;
+  height: auto;
+}
+
 h1 {
-  font-size: 32px;
+  font-size: 2em;
   font-weight: bold;
   padding: 1em;
 }
 
 h2 {
-  font-size: 18px;
+  font-size: 1.5em;
 }
 
+.rodape{
+  width: 100%;
+  background: #111111;
+  padding: 1em 0;
+  text-align: center;
+  color: white;
+}

@@ -16,8 +16,6 @@
     <main>
       <section class="caixa-entrada">
         <textarea
-          cols="60"
-          rows="30"
           id="mensagem"
           placeholder="Digite sua mensagem"
         ></textarea>
@@ -27,7 +25,7 @@
             <iconify-icon
               inline-block
               icon="bi:exclamation-circle-fill"
-              style="color: #aaa"
+              style="color: #darkred;"
             ></iconify-icon>
             Apenas letras minúsculas e sem acento.
           </p>
@@ -44,13 +42,13 @@
         
 
         <div id="aviso">
-			<img src="senhor-kaio.png" alt="Senhor Kaiô">
-			<p><h1>Nenhuma mensagem encontrada</h1></p>
-			<p><h2>Digite um texto que você deseja criptografar ou descriptografar.</h2></p>	
+    			<img src="senhor-kaio.png" alt="Senhor Kaiô">
+    			<p><h1>Nenhuma mensagem encontrada</h1></p>
+    			<p><h2>Digite um texto que você deseja criptografar ou descriptografar.</h2></p>	
         </div>
 
         <div id="mensagem-saida">
-        	 <textarea id="texto-saida" cols="30" rows="30"></textarea>
+        	 <textarea id="texto-saida" readonly></textarea>
         	 <button onclick = "copiarTexto()" id="copiar" class="btn-copiar">Copiar</button>
 
         </div>
@@ -58,5 +56,15 @@
 
       </section>
     </main>
+
+    <footer class="rodape">
+      <img src="esfera.png" width="120" height="120">
+      <article>Álvaro Pires Santos, desenvolvedor Java Back-end desde 2022
+        <a href="https://www.linkedin.com/in/alvaro-pires-santos/" target="_blank"> <iconify-icon icon="mdi:linkedin" style="color: #666;"></iconify-icon></a>
+        <a href="https://www.github.com/alvaropires" target="_blank"> <iconify-icon icon="fluent-mdl2:git-hub-logo" style="color: #666;"></iconify-icon></a>
+        <a href="https://www.instagram.com/alvaropiress/" target="_blank"> <iconify-icon icon="mdi:instagram" style="color: #666;"></iconify-icon></a>
+      </article>
+      <p class="copyright">&copy; Copyright Álvaro Pires Santos - 2023</p>
+    </footer>
   </body>
 </html>
