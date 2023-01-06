@@ -4,10 +4,12 @@ function entradaDeTexto() {
 }
 
 function criptografar() {
+  
   var texto = entradaDeTexto();
   var elemento = document.getElementById('texto-saida');
   if(texto){
     esconderImagem();
+    ativarSom('audio-shenlong.mp3');
   }else{
     mostrarImagem();
   }
@@ -24,10 +26,12 @@ function criptografar() {
 }
 
 function descriptografar() {
+  
   var texto = entradaDeTexto();
   var elemento = document.getElementById('texto-saida');
   if(texto){
     esconderImagem();
+    ativarSom('audio-shenlong.mp3');
   }else{
     mostrarImagem();
   }
@@ -62,4 +66,10 @@ function copiarTexto(){
   copyText.select()
   document.execCommand("copy");
 
+}
+
+function ativarSom(string){
+  var som = new Audio();
+  som.src = string;
+  som.play();
 }
