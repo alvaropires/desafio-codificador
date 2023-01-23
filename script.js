@@ -1,50 +1,51 @@
-function entradaDeTexto() {
-  var conteudo = document.getElementById('mensagem').value.toLowerCase();
-  return conteudo;
+
+const textArea = document.getElementById('mensagem');
+const mensagem = document.getElementById('texto-saida');
+
+let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
+
+
+function btnCriptografar(){
+
+  var textoCriptografado = criptografar(textArea.value.toLowerCase());
+  mensagem.value = textoCriptografado;
+  esconderCaixaMensagem(textoCriptografado)
+  textArea.value = "";
+
+  
 }
 
-function criptografar() {
-  
-  var texto = entradaDeTexto();
-  var elemento = document.getElementById('texto-saida');
-  if(texto){
-    esconderImagem();
-    ativarSom('audio-shenlong.mp3');
-  }else{
-    mostrarImagem();
+function criptografar(stringCriptografada) {
+
+  stringCriptografada = stringCriptografada.toLowerCase();
+
+  for(var i = 0; i < matrizCodigo.length; i++){
+    if(stringCriptografada.includes(matrizCodigo[i][0])){
+     stringCriptografada = stringCriptografada.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1]);
+    }
   }
-
-  
-  textoCriptografado = texto
-  .replaceAll('e', 'enter')
-  .replaceAll('i', 'imes')
-  .replaceAll('a', 'ai')
-  .replaceAll('o', 'ober')
-  .replaceAll('u', 'ufat');
-
-  elemento.value = textoCriptografado;
+  return stringCriptografada;
 }
 
-function descriptografar() {
-  
-  var texto = entradaDeTexto();
-  var elemento = document.getElementById('texto-saida');
-  if(texto){
-    esconderImagem();
-    ativarSom('audio-shenlong.mp3');
-  }else{
-    mostrarImagem();
+function btnDescriptografar(){
+
+  var textoCriptografado = descriptografar(textArea.value.toLowerCase());
+  mensagem.value = textoCriptografado;
+  esconderCaixaMensagem(textoCriptografado)
+  textArea.value = "";
+}
+
+
+function descriptografar(stringCriptografada) {
+
+  stringCriptografada = stringCriptografada.toLowerCase();
+
+  for(var i = 0; i < matrizCodigo.length; i++){
+    if(stringCriptografada.includes(matrizCodigo[i][1])){
+     stringCriptografada = stringCriptografada.replaceAll(matrizCodigo[i][1], matrizCodigo[i][0]);
+    }
   }
-
-  textoDescriptografado = texto
-  .replaceAll('enter', 'e')
-  .replaceAll('imes', 'i')
-  .replaceAll('ai', 'a')
-  .replaceAll('ober', 'o')
-  .replaceAll('ufat', 'u');
-
-  elemento.value = textoDescriptografado;
-
+  return stringCriptografada;
 }
 
 function esconderImagem(){
@@ -60,16 +61,25 @@ function mostrarImagem(){
   document.getElementById("mensagem-saida").style.display = 'none';
 }
 
+function ativarSom(string){
+  var som = new Audio();
+  som.src = string;
+  som.play();
+}
+
+function esconderCaixaMensagem(mensagem){
+  if(mensagem){
+    esconderImagem();
+    ativarSom('audio-shenlong.mp3');
+  }else{
+    mostrarImagem();
+  }
+}
+
 function copiarTexto(){
 
   var copyText = document.getElementById('texto-saida');
   copyText.select()
   document.execCommand("copy");
 
-}
-
-function ativarSom(string){
-  var som = new Audio();
-  som.src = string;
-  som.play();
 }

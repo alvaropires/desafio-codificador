@@ -132,6 +132,10 @@ h2 {
 }
 
 @media screen and (max-width: 440px){
+
+  body{
+    background-size: contain;
+  }
   .caixa-entrada, .caixa-saida{
     width: auto;
   }
